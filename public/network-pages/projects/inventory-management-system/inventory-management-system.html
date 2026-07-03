@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>
+    Inventory Management System
+</title>
+
+<link
+    rel="stylesheet"
+    href="./css/inventory.css"
+>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet"
+>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+<!-- =========================
+HEADER
+========================= -->
+
+<header class="dashboard-header">
+
+<div class="header-left">
+
+<div class="dashboard-label">
+
+INVENTORY MANAGEMENT
+
+</div>
+
+<h1>
+
+Inventory Management System
+
+</h1>
+
+<p>
+
+Real-time inventory monitoring platform
+for stock management, warehouse control,
+supplier tracking and business reporting.
+
+</p>
+
+</div>
+
+<div class="header-right">
+
+<button
+class="header-btn"
+id="exportBtn"
+>
+
+Export CSV
+
+</button>
+
+<button
+class="header-btn primary"
+id="refreshBtn"
+>
+
+Reset Filters
+
+</button>
+
+</div>
+
+</header>
+
+<!-- =========================
+FILTERS
+========================= -->
+
+<section class="filters-section">
+
+<div class="filter-group">
+
+<label>
+
+Category
+
+</label>
+
+<select id="categoryFilter">
+
+<option value="all">
+
+All Categories
+
+</option>
+
+</select>
+
+</div>
+
+<div class="filter-group">
+
+<label>
+
+Supplier
+
+</label>
+
+<select id="supplierFilter">
+
+<option value="all">
+
+All Suppliers
+
+</option>
+
+</select>
+
+</div>
+
+<div class="filter-group">
+
+<label>
+
+Status
+
+</label>
+
+<select id="statusFilter">
+
+<option value="all">
+
+All Status
+
+</option>
+
+</select>
+
+</div>
+
+<div class="filter-group">
+
+<label>
+
+Search Product
+
+</label>
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search product..."
+>
+
+</div>
+
+</section>
+
+<!-- =========================
+KPI CARDS
+========================= -->
+
+<section class="kpi-grid">
+
+<div class="kpi-card">
+
+<div class="kpi-title">
+
+Total Products
+
+</div>
+
+<div
+class="kpi-value"
+id="totalProducts"
+>
+
+0
+
+</div>
+
+<div class="kpi-growth">
+
+Products Available
+
+</div>
+
+</div>
+
+<div class="kpi-card">
+
+<div class="kpi-title">
+
+Total Stock
+
+</div>
+
+<div
+class="kpi-value"
+id="totalStock"
+>
+
+0
+
+</div>
+
+<div class="kpi-growth">
+
+Units In Inventory
+
+</div>
+
+</div>
+
+<div class="kpi-card">
+
+<div class="kpi-title">
+
+Low Stock Items
+
+</div>
+
+<div
+class="kpi-value"
+id="lowStock"
+>
+
+0
+
+</div>
+
+<div class="kpi-growth">
+
+Need Reordering
+
+</div>
+
+</div>
+
+<div class="kpi-card">
+
+<div class="kpi-title">
+
+Inventory Value
+
+</div>
+
+<div
+class="kpi-value"
+id="inventoryValue"
+>
+
+₹0
+
+</div>
+
+<div class="kpi-growth">
+
+Total Asset Value
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+CHARTS ROW 1
+========================= -->
+
+<section class="chart-row">
+
+<div class="chart-card large">
+
+<div class="card-header">
+
+<h3>
+
+Stock By Category
+
+</h3>
+
+</div>
+
+<canvas
+id="categoryChart"
+></canvas>
+
+</div>
+
+<div class="chart-card">
+
+<div class="card-header">
+
+<h3>
+
+Stock Status
+
+</h3>
+
+</div>
+
+<canvas
+id="statusChart"
+></canvas>
+
+</div>
+
+</section>
+<!-- =========================
+CHARTS ROW 2
+========================= -->
+
+<section class="chart-row">
+
+<div class="chart-card">
+
+<div class="card-header">
+
+<h3>
+
+Inventory Value Distribution
+
+</h3>
+
+</div>
+
+<canvas
+id="valueChart"
+></canvas>
+
+</div>
+
+<div class="chart-card">
+
+<div class="card-header">
+
+<h3>
+
+Top Products
+
+</h3>
+
+</div>
+
+<canvas
+id="topProductsChart"
+></canvas>
+
+</div>
+
+</section>
+
+<!-- =========================
+INVENTORY TABLE
+========================= -->
+
+<section class="inventory-section">
+
+<div class="table-card">
+
+<div class="card-header">
+
+<h3>
+
+Inventory Records
+
+</h3>
+
+</div>
+
+<div class="table-wrapper">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+
+<th>Product</th>
+
+<th>SKU</th>
+
+<th>Category</th>
+
+<th>Stock</th>
+
+<th>Price</th>
+
+<th>Supplier</th>
+
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+<tbody id="inventoryTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+RECENT INVENTORY ACTIVITY
+========================= -->
+
+<section class="recent-section">
+
+<div class="table-card">
+
+<div class="card-header">
+
+<h3>
+
+Recent Inventory Activity
+
+</h3>
+
+</div>
+
+<div class="table-wrapper">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Product</th>
+
+<th>Category</th>
+
+<th>Supplier</th>
+
+<th>Stock</th>
+
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+<tbody id="recentActivityTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+OVERVIEW
+========================= -->
+
+<section class="overview-card">
+
+<h2>
+
+Inventory Dashboard Overview
+
+</h2>
+
+<p>
+
+This Inventory Management System demonstrates
+inventory tracking, supplier management,
+stock monitoring, reporting, data analysis,
+dashboard development and business intelligence
+using HTML, CSS, JavaScript and Chart.js.
+
+</p>
+
+<div class="overview-grid">
+
+<div>
+
+<h4>
+
+Features
+
+</h4>
+
+<ul>
+
+<li>Inventory Monitoring</li>
+
+<li>Supplier Tracking</li>
+
+<li>Low Stock Alerts</li>
+
+<li>Search & Filters</li>
+
+<li>Export Reports</li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h4>
+
+Technologies
+
+</h4>
+
+<ul>
+
+<li>HTML5</li>
+
+<li>CSS3</li>
+
+<li>JavaScript</li>
+
+<li>JSON</li>
+
+<li>Chart.js</li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h4>
+
+Business Metrics
+
+</h4>
+
+<ul>
+
+<li>Total Products</li>
+
+<li>Stock Quantity</li>
+
+<li>Inventory Value</li>
+
+<li>Supplier Analysis</li>
+
+<li>Category Analysis</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+<script src="./js/products.js"></script>
+
+<script src="./js/analytics.js"></script>
+
+<script src="./js/inventory.js"></script>
+
+</body>
+
+</html>

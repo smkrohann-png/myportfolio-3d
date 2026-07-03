@@ -1,0 +1,9 @@
+[
+ {
+   "id":1,
+   "name":"Premium Hoodie",
+   "price":2999,
+   "category":"Men",
+   "image":"images/product1.png"
+ }
+]

@@ -1,0 +1,253 @@
+[
+  {
+    "id": 1,
+    "product": "Dell Latitude 5440",
+    "sku": "DL-5440",
+    "category": "Laptops",
+    "stock": 25,
+    "price": 65000,
+    "supplier": "Dell India",
+    "status": "In Stock"
+  },
+  {
+    "id": 2,
+    "product": "HP ProBook 450",
+    "sku": "HP-450",
+    "category": "Laptops",
+    "stock": 8,
+    "price": 58000,
+    "supplier": "HP India",
+    "status": "Low Stock"
+  },
+  {
+    "id": 3,
+    "product": "Lenovo ThinkPad E14",
+    "sku": "LN-E14",
+    "category": "Laptops",
+    "stock": 18,
+    "price": 62000,
+    "supplier": "Lenovo India",
+    "status": "In Stock"
+  },
+  {
+    "id": 4,
+    "product": "Apple MacBook Air",
+    "sku": "MBA-M2",
+    "category": "Laptops",
+    "stock": 5,
+    "price": 112000,
+    "supplier": "Apple India",
+    "status": "Low Stock"
+  },
+  {
+    "id": 5,
+    "product": "Samsung Monitor",
+    "sku": "SM-24",
+    "category": "Monitors",
+    "stock": 30,
+    "price": 14500,
+    "supplier": "Samsung India",
+    "status": "In Stock"
+  },
+  {
+    "id": 6,
+    "product": "LG UltraWide Monitor",
+    "sku": "LG-UW",
+    "category": "Monitors",
+    "stock": 12,
+    "price": 24000,
+    "supplier": "LG Electronics",
+    "status": "In Stock"
+  },
+  {
+    "id": 7,
+    "product": "Logitech Mouse",
+    "sku": "LG-M01",
+    "category": "Accessories",
+    "stock": 45,
+    "price": 899,
+    "supplier": "Logitech",
+    "status": "In Stock"
+  },
+  {
+    "id": 8,
+    "product": "Logitech Keyboard",
+    "sku": "LG-K01",
+    "category": "Accessories",
+    "stock": 35,
+    "price": 1499,
+    "supplier": "Logitech",
+    "status": "In Stock"
+  },
+  {
+    "id": 9,
+    "product": "HP Laser Printer",
+    "sku": "HP-PR01",
+    "category": "Printers",
+    "stock": 7,
+    "price": 18500,
+    "supplier": "HP India",
+    "status": "Low Stock"
+  },
+  {
+    "id": 10,
+    "product": "Canon Ink Printer",
+    "sku": "CN-PR02",
+    "category": "Printers",
+    "stock": 14,
+    "price": 12800,
+    "supplier": "Canon India",
+    "status": "In Stock"
+  },
+  {
+    "id": 11,
+    "product": "Acer Aspire 7",
+    "sku": "AC-A7",
+    "category": "Laptops",
+    "stock": 11,
+    "price": 54000,
+    "supplier": "Acer India",
+    "status": "In Stock"
+  },
+  {
+    "id": 12,
+    "product": "Asus Vivobook",
+    "sku": "AS-VB",
+    "category": "Laptops",
+    "stock": 6,
+    "price": 49500,
+    "supplier": "Asus India",
+    "status": "Low Stock"
+  }
+  ,
+  {
+    "id": 13,
+    "product": "Zebronics Webcam",
+    "sku": "ZB-WC01",
+    "category": "Accessories",
+    "stock": 22,
+    "price": 2499,
+    "supplier": "Zebronics",
+    "status": "In Stock"
+  },
+  {
+    "id": 14,
+    "product": "Boat Headphones",
+    "sku": "BT-H01",
+    "category": "Accessories",
+    "stock": 28,
+    "price": 1999,
+    "supplier": "Boat",
+    "status": "In Stock"
+  },
+  {
+    "id": 15,
+    "product": "Dell Docking Station",
+    "sku": "DL-DK01",
+    "category": "Accessories",
+    "stock": 4,
+    "price": 8999,
+    "supplier": "Dell India",
+    "status": "Low Stock"
+  },
+  {
+    "id": 16,
+    "product": "Epson EcoTank Printer",
+    "sku": "EP-ET01",
+    "category": "Printers",
+    "stock": 9,
+    "price": 22999,
+    "supplier": "Epson India",
+    "status": "Low Stock"
+  },
+  {
+    "id": 17,
+    "product": "BenQ Monitor",
+    "sku": "BQ-M01",
+    "category": "Monitors",
+    "stock": 15,
+    "price": 17999,
+    "supplier": "BenQ",
+    "status": "In Stock"
+  },
+  {
+    "id": 18,
+    "product": "MSI Gaming Monitor",
+    "sku": "MSI-GM",
+    "category": "Monitors",
+    "stock": 10,
+    "price": 28999,
+    "supplier": "MSI India",
+    "status": "In Stock"
+  },
+  {
+    "id": 19,
+    "product": "Apple Magic Keyboard",
+    "sku": "AP-KB01",
+    "category": "Accessories",
+    "stock": 3,
+    "price": 10999,
+    "supplier": "Apple India",
+    "status": "Low Stock"
+  },
+  {
+    "id": 20,
+    "product": "HP EliteBook 840",
+    "sku": "HP-EB840",
+    "category": "Laptops",
+    "stock": 13,
+    "price": 78000,
+    "supplier": "HP India",
+    "status": "In Stock"
+  },
+  {
+    "id": 21,
+    "product": "Lenovo IdeaPad Slim 5",
+    "sku": "LN-IP5",
+    "category": "Laptops",
+    "stock": 17,
+    "price": 59000,
+    "supplier": "Lenovo India",
+    "status": "In Stock"
+  },
+  {
+    "id": 22,
+    "product": "Canon Pixma G3010",
+    "sku": "CN-G3010",
+    "category": "Printers",
+    "stock": 12,
+    "price": 16999,
+    "supplier": "Canon India",
+    "status": "In Stock"
+  },
+  {
+    "id": 23,
+    "product": "Samsung Curved Monitor",
+    "sku": "SM-CV01",
+    "category": "Monitors",
+    "stock": 7,
+    "price": 25999,
+    "supplier": "Samsung India",
+    "status": "Low Stock"
+  },
+  {
+    "id": 24,
+    "product": "Adata SSD 1TB",
+    "sku": "AD-SSD1",
+    "category": "Storage",
+    "stock": 31,
+    "price": 6499,
+    "supplier": "Adata",
+    "status": "In Stock"
+  },
+  {
+    "id": 25,
+    "product": "Seagate External HDD",
+    "sku": "SG-HDD1",
+    "category": "Storage",
+    "stock": 19,
+    "price": 5299,
+    "supplier": "Seagate",
+    "status": "In Stock"
+  }
+]

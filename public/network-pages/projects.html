@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Projects | SMK Rohan</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html,
+body{
+background:#000;
+color:#fff;
+font-family:'Inter',sans-serif;
+overflow-x:hidden;
+}
+
+.projects-page{
+width:100%;
+min-height:100vh;
+padding:90px 9vw;
+display:grid;
+grid-template-columns:42% 58%;
+gap:70px;
+}
+
+.left{
+position:sticky;
+top:90px;
+height:max-content;
+}
+
+.mini-label{
+font-size:14px;
+letter-spacing:6px;
+text-transform:uppercase;
+color:#666;
+margin-bottom:45px;
+}
+
+.hero-title{
+font-size:clamp(3rem,5vw,5rem);
+font-weight:300;
+line-height:.9;
+letter-spacing:-3px;
+margin-bottom:35px;
+}
+
+.hero-description{
+font-size:1rem;
+line-height:2;
+color:#8a8a8a;
+max-width:520px;
+}
+
+.separator{
+height:1px;
+background:#151515;
+margin:40px 0;
+}
+
+.right{
+display:grid;
+grid-template-columns:repeat(2,minmax(280px,1fr));
+gap:24px;
+align-content:start;
+}
+
+.project-card{
+border:1px solid #111;
+border-radius: 5px;
+padding:28px;
+background:#050505;
+transition:.5s ease;
+cursor:pointer;
+}
+
+.project-card:hover{
+border-color:#2a2a2a;
+transform:translateY(-6px);
+}
+
+.project-card:hover .project-title{
+color:white;
+}
+
+.project-card:hover .project-arrow{
+transform:translateX(8px);
+}
+
+.project-category{
+font-size:11px;
+letter-spacing:4px;
+text-transform:uppercase;
+color:#666;
+margin-bottom:18px;
+}
+
+.project-title{
+font-size:1.5rem;
+font-weight:300;
+margin-bottom:16px;
+transition:.4s;
+}
+
+.project-description{
+font-size:.92rem;
+line-height:1.8;
+color:#8d8d8d;
+margin-bottom:24px;
+}
+
+.project-footer{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.project-tech{
+font-size:.8rem;
+color:#6f6f6f;
+}
+
+.project-arrow{
+font-size:18px;
+color:#999;
+transition:.4s;
+}
+
+.back-btn{
+position:fixed;
+right:60px;
+top:55px;
+font-size:20px;
+color:#777;
+cursor:pointer;
+transition:.4s;
+z-index:999;
+}
+
+.back-btn:hover{
+color:white;
+transform:translateX(-5px);
+}
+
+.reveal{
+overflow:hidden;
+}
+
+.reveal-inner{
+display:block;
+transform:translateY(-130%);
+opacity:0;
+transition:
+transform 1.8s cubic-bezier(.16,1,.3,1),
+opacity 1.8s cubic-bezier(.16,1,.3,1);
+}
+
+.reveal.active .reveal-inner{
+transform:translateY(0);
+opacity:1;
+}
+
+@media(max-width:1000px){
+
+.projects-page{
+grid-template-columns:1fr;
+}
+
+.left{
+position:relative;
+top:auto;
+}
+
+.right{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="back-btn">
+←
+</div>
+
+<section class="projects-page">
+
+<div class="left">
+
+<div class="mini-label reveal">
+<span class="reveal-inner">
+SMK ROHAN / PROJECTS
+</span>
+</div>
+
+<h1 class="hero-title reveal">
+<span class="reveal-inner">
+Selected<br>
+Digital<br>
+Projects
+</span>
+</h1>
+
+<p class="hero-description reveal">
+<span class="reveal-inner">
+A collection of web applications,
+business systems, dashboards,
+automation tools and digital
+solutions developed across
+different industries.
+</span>
+</p>
+
+<div class="separator"></div>
+
+<p class="hero-description reveal">
+<span class="reveal-inner">
+These projects demonstrate
+frontend development,
+business workflow design,
+UI systems and practical
+problem solving.
+</span>
+</p>
+
+</div>
+
+<div class="right">
+<div
+  class="project-card reveal"
+  onclick="openProject('projects/sales-analytics-dashboard/sales-analytics-dashboard.html')"
+>
+  <div class="reveal-inner">
+    <div class="project-category">
+      DATA ANALYTICS
+    </div>
+
+    <div class="project-title">
+      Sales Analytics Dashboard
+    </div>
+
+    <div class="project-description">
+      Interactive business intelligence dashboard for sales, profit and customer performance analysis.
+    </div>
+
+    <div class="project-footer">
+      <span class="project-tech">
+        Excel · Pivot Tables · Power Query
+      </span>
+
+      <span class="project-arrow">
+        →
+      </span>
+    </div>
+  </div>
+</div>
+
+<div
+  class="project-card reveal"
+  onclick="openProject('projects/inventory-management-system/inventory-management-system.html')"
+>
+  <div class="reveal-inner">
+    <div class="project-category">
+  OPERATIONS MANAGEMENT
+</div>
+
+<div class="project-title">
+  Inventory Management System
+</div>
+
+<div class="project-description">
+  Real-time inventory dashboard with stock monitoring, supplier tracking, low stock alerts and inventory analytics.
+</div>
+
+<div class="project-footer">
+  <span class="project-tech">
+    HTML · CSS · JavaScript · Chart.js
+  </span>
+
+  <span class="project-arrow">
+    →
+  </span>
+</div>
+  </div>
+</div>
+
+<div
+class="project-card reveal"
+onclick="openProject('projects/luxury-fashion-store/fashion-store.html')"
+>
+
+<div class="reveal-inner">
+
+<div class="project-category">
+FASHION • LUXURY
+</div>
+
+<div class="project-title">
+Luxury Fashion Store
+</div>
+
+<div class="project-description">
+Premium fashion ecommerce experience featuring curated collections, product galleries, shopping cart, wishlist, smooth interactions and modern luxury branding.
+</div>
+
+<div class="project-footer">
+
+<span class="project-tech">
+HTML • CSS • JavaScript • GSAP
+</span>
+
+<span class="project-arrow">
+→
+</span>
+
+</div>
+
+</div>
+
+</div>
+<!-- 
+<div
+  class="project-card reveal"
+  onclick="openProject('portfolio.html')"
+>
+  <div class="reveal-inner">
+    <div class="project-category">
+      PERSONAL BRAND
+    </div>
+
+    <div class="project-title">
+      Portfolio Website
+    </div>
+
+    <div class="project-description">
+      Interactive portfolio with
+      premium layouts and smooth
+      transitions.
+    </div>
+
+    <div class="project-footer">
+      <span class="project-tech">
+        Three.js · Next.js
+      </span>
+
+      <span class="project-arrow">
+        →
+      </span>
+    </div>
+  </div>
+</div>
+
+<div
+  class="project-card reveal"
+  onclick="openProject('ecommerce.html')"
+>
+  <div class="reveal-inner">
+    <div class="project-category">
+      COMMERCE
+    </div>
+
+    <div class="project-title">
+      Ecommerce Store
+    </div>
+
+    <div class="project-description">
+      Online shopping platform
+      with product management and
+      checkout workflows.
+    </div>
+
+    <div class="project-footer">
+      <span class="project-tech">
+        React · Stripe
+      </span>
+
+      <span class="project-arrow">
+        →
+      </span>
+    </div>
+  </div>
+</div>
+
+<div
+  class="project-card reveal"
+  onclick="openProject('analytics.html')"
+>
+  <div class="reveal-inner">
+    <div class="project-category">
+      DATA
+    </div>
+
+    <div class="project-title">
+      Analytics Platform
+    </div>
+
+    <div class="project-description">
+      KPI monitoring dashboard
+      with visual reports and
+      operational insights.
+    </div>
+
+    <div class="project-footer">
+      <span class="project-tech">
+        Dashboard · Charts
+      </span>
+
+      <span class="project-arrow">
+        →
+      </span>
+    </div>
+  </div>
+</div>
+
+<div
+  class="project-card reveal"
+  onclick="openProject('restaurant.html')"
+>
+  <div class="reveal-inner">
+    <div class="project-category">
+      FOOD BUSINESS
+    </div>
+
+    <div class="project-title">
+      Restaurant Website
+    </div>
+
+    <div class="project-description">
+      Premium restaurant brand
+      experience with menu and
+      reservation flow.
+    </div>
+
+    <div class="project-footer">
+      <span class="project-tech">
+        UI Design · Branding
+      </span>
+
+      <span class="project-arrow">
+        →
+      </span>
+    </div>
+  </div>
+</div>
+
+<div
+  class="project-card reveal"
+  onclick="openProject('social-app.html')"
+>
+  <div class="reveal-inner">
+    <div class="project-category">
+      COMMUNITY
+    </div>
+
+    <div class="project-title">
+      Social App
+    </div>
+
+    <div class="project-description">
+      Social interaction platform
+      with profiles, feeds and
+      engagement tools.
+    </div>
+
+    <div class="project-footer">
+      <span class="project-tech">
+        React · Firebase
+      </span>
+
+      <span class="project-arrow">
+        →
+      </span>
+    </div>
+  </div>
+</div>
+
+<div
+  class="project-card reveal"
+  onclick="openProject('task-app.html')"
+>
+  <div class="reveal-inner">
+    <div class="project-category">
+      PRODUCTIVITY
+    </div>
+
+    <div class="project-title">
+      Task Manager
+    </div>
+
+    <div class="project-description">
+      Project planning and task
+      management solution for
+      teams and freelancers.
+    </div>
+
+    <div class="project-footer">
+      <span class="project-tech">
+        React · Node
+      </span>
+
+      <span class="project-arrow">
+        →
+      </span>
+    </div>
+  </div>
+</div>
+
+<div
+  class="project-card reveal"
+  onclick="openProject('real-estate.html')"
+>
+  <div class="reveal-inner">
+    <div class="project-category">
+      PROPERTY
+    </div>
+
+    <div class="project-title">
+      Real Estate Portal
+    </div>
+
+    <div class="project-description">
+      Property showcase platform
+      with listing management and
+      lead generation.
+    </div>
+
+    <div class="project-footer">
+      <span class="project-tech">
+        Next.js · CMS
+      </span>
+
+      <span class="project-arrow">
+        →
+      </span>
+    </div>
+  </div>
+</div>
+
+</div> -->
+
+</section>
+<script>
+
+function openProject(page){
+  window.location.href = page;
+}
+
+/* =========================
+REVEAL ANIMATION
+========================= */
+
+const reveals =
+document.querySelectorAll('.reveal');
+
+const observer =
+new IntersectionObserver(
+(entries)=>{
+
+entries.forEach((entry)=>{
+
+if(entry.isIntersecting){
+
+reveals.forEach(
+(element,index)=>{
+
+setTimeout(()=>{
+
+element.classList.add('active');
+
+}, index * 120);
+
+});
+
+}
+
+});
+
+},
+{
+threshold:0.1
+}
+);
+
+reveals.forEach((item)=>{
+observer.observe(item);
+});
+
+/* =========================
+BACK BUTTON
+========================= */
+
+document
+.querySelector('.back-btn')
+.addEventListener('click',()=>{
+
+window.location.href='/';
+
+});
+
+/* =========================
+ESC KEY
+========================= */
+
+document.addEventListener(
+'keydown',
+(e)=>{
+
+if(e.key === 'Escape'){
+
+if(document.referrer){
+window.history.back();
+}
+
+}
+
+}
+);
+
+/* =========================
+CARD FOCUS EFFECT
+========================= */
+
+const cards =
+document.querySelectorAll(
+'.project-card'
+);
+
+cards.forEach((card)=>{
+
+card.addEventListener(
+'mouseenter',
+()=>{
+
+cards.forEach((item)=>{
+
+if(item !== card){
+
+item.style.opacity = '.35';
+
+}
+
+});
+
+}
+);
+
+card.addEventListener(
+'mouseleave',
+()=>{
+
+cards.forEach((item)=>{
+
+item.style.opacity = '1';
+
+});
+
+}
+);
+
+});
+
+/* =========================
+PAGE FADE IN
+========================= */
+
+window.addEventListener(
+'load',
+()=>{
+
+document.body.animate(
+[
+{
+opacity:0
+},
+{
+opacity:1
+}
+],
+{
+duration:1200,
+fill:'forwards',
+easing:'ease'
+}
+);
+
+}
+);
+
+</script>
+
+</body>
+
+</html>

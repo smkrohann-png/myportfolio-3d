@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About | SMK Rohan</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html,
+body{
+  width:100%;
+  min-height:100vh;
+  font-family:'Inter',sans-serif;
+  background:#000;
+  color:#fff;
+  transition:opacity 1.2s ease;
+}
+
+body{
+  position:relative;
+  overflow-x:hidden;
+}
+
+/* =========================
+MAIN LAYOUT
+========================= */
+
+.about-page{
+  width:100%;
+  min-height:100vh;
+  display:grid;
+  grid-template-columns:60% 40%;
+  padding:90px 9vw;
+  gap:40px;
+}
+
+/* =========================
+LEFT SIDE
+========================= */
+
+.left{
+  display:flex;
+  flex-direction:column;
+}
+
+.mini-label{
+  font-size:15px;
+  letter-spacing:6px;
+  text-transform:uppercase;
+  color:#777;
+  margin-bottom:50px;
+}
+
+.hero-title{
+  font-weight:300;
+  font-size:clamp(3rem, 5vw, 5rem);
+  line-height:.9;
+  letter-spacing:-3px;
+  margin-bottom:40px;
+  max-width:600px;
+}
+
+.hero-description{
+  max-width:620px;
+  font-size:1rem;
+  line-height:2;
+  color:#8f8f8f;
+  margin-bottom:35px;
+}
+
+.separator{
+  width:100%;
+  max-width:650px;
+  height:1px;
+  background:#151515;
+  margin:15px 0 35px;
+}
+
+/* =========================
+RIGHT SIDE
+========================= */
+
+.right{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.info-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(200px,1fr));
+  gap:30px;
+  align-items:start;
+}
+
+.info-block{
+  padding:0;
+  transition:.5s ease;
+}
+
+.info-block:hover{
+  transform:translateX(8px);
+}
+
+.info-block:hover .info-title{
+  color:#fff;
+}
+
+.info-block:hover .info-content{
+  color:#e5e5e5;
+}
+
+.info-title{
+  font-size:12px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  color:#666;
+  margin-bottom:12px;
+}
+
+.info-content{
+  letter-spacing:1px;
+  font-size:.85rem;
+  line-height:2;
+  color:#bcbcbc;
+}
+
+.education-block{
+  margin-top:40px;
+  padding-top:30px;
+  border-top:1px solid #151515;
+}
+
+.education-title{
+  font-size:12px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  color:#666;
+  margin-bottom:16px;
+}
+
+.education-content{
+  letter-spacing:1px;
+  font-size:.85rem;
+  line-height:1.5;
+  color:#b5b5b5;
+  display:grid;
+  gap:14px;
+  margin-top:12px;
+}
+
+.education-line{
+  white-space:nowrap;
+}
+
+/* =========================
+BACK BUTTON
+========================= */
+
+.back-btn{
+  position:absolute;
+  top:60px;
+  right:70px;
+  font-size:20px;
+  color:#777;
+  cursor:pointer;
+  transition:.4s;
+}
+
+.back-btn:hover{
+  color:white;
+  transform:translateX(-5px);
+}
+
+/* =========================
+REVEAL ANIMATION
+========================= */
+
+.reveal{
+  overflow:hidden;
+}
+
+.reveal-inner{
+  display:block;
+  transform:translateY(-130%);
+  opacity:0;
+  transition:transform 1.8s cubic-bezier(.16,1,.3,1), opacity 1.8s cubic-bezier(.16,1,.3,1);
+}
+
+.reveal.active .reveal-inner{
+  transform:translateY(0);
+  opacity:1;
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media (max-width:900px){
+  .about-page{
+    grid-template-columns:1fr;
+    padding:70px 8vw;
+    gap:50px;
+    overflow-y:auto;
+  }
+
+  .info-grid{
+    grid-template-columns:repeat(2,minmax(180px,1fr));
+  }
+
+  .right{
+    padding-bottom:80px;
+  }
+
+  .back-btn{
+    right:35px;
+    top:40px;
+  }
+
+  .hero-title{
+    font-size:3.3rem;
+  }
+}
+
+@media (max-width:768px){
+  .hero-title{
+    font-size:2.7rem;
+    letter-spacing:-2px;
+  }
+
+  .hero-description{
+    font-size:.9rem;
+  }
+
+  .info-content,
+  .education-content{
+    font-size:.9rem;
+  }
+
+  .mini-label{
+    font-size:10px;
+    letter-spacing:4px;
+  }
+}
+/* =========================
+TABLET
+========================= */
+
+@media (max-width:1024px){
+
+  .about-page{
+    grid-template-columns:1fr;
+    gap:70px;
+    padding:80px 8vw;
+  }
+
+  .left,
+  .right{
+    width:100%;
+  }
+
+  .hero-title{
+    max-width:100%;
+  }
+
+  .hero-description{
+    max-width:100%;
+  }
+
+  .separator{
+    max-width:100%;
+  }
+
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media (max-width:768px){
+
+  .about-page{
+    grid-template-columns:1fr;
+    padding:60px 7vw 90px;
+    gap:60px;
+  }
+
+  .mini-label{
+    font-size:11px;
+    letter-spacing:4px;
+    margin-bottom:35px;
+  }
+
+  .hero-title{
+    font-size:clamp(2.5rem,10vw,4rem);
+    line-height:.92;
+    letter-spacing:-2px;
+    margin-bottom:30px;
+  }
+
+  .hero-description{
+    font-size:.95rem;
+    line-height:1.9;
+  }
+
+  .info-grid{
+    grid-template-columns:1fr;
+    gap:28px;
+  }
+
+  .info-title{
+    font-size:11px;
+  }
+
+  .info-content{
+    font-size:.92rem;
+    line-height:1.8;
+  }
+
+  .education-content{
+    font-size:.9rem;
+    line-height:1.7;
+  }
+
+  .education-line{
+    white-space:normal;
+    word-break:break-word;
+  }
+
+  .back-btn{
+    top:30px;
+    right:25px;
+    font-size:22px;
+  }
+
+}
+
+/* =========================
+SMALL MOBILE
+========================= */
+
+@media (max-width:480px){
+
+  .about-page{
+    padding:55px 6vw 80px;
+  }
+
+  .hero-title{
+    font-size:2.3rem;
+    letter-spacing:-1px;
+  }
+
+  .hero-description{
+    font-size:.9rem;
+    line-height:1.8;
+  }
+
+  .info-content{
+    font-size:.88rem;
+  }
+
+  .education-content{
+    font-size:.85rem;
+  }
+
+}/* =========================
+SCROLLBAR
+========================= */
+
+::-webkit-scrollbar{
+  width:6px;
+}
+
+::-webkit-scrollbar-track{
+  background:#050505;
+}
+
+::-webkit-scrollbar-thumb{
+  background:#1a1a1a;
+  border-radius:20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="back-btn">
+  ←
+</div>
+
+<section class="about-page">
+
+  <!-- LEFT -->
+  <div class="left">
+
+    <div class="mini-label reveal">
+      <span class="reveal-inner">
+        SMK ROHAN / ABOUT
+      </span>
+    </div>
+
+    <h1 class="hero-title reveal">
+      <span class="reveal-inner">
+        Digital<br>
+        Solutions<br>
+        Specialist
+      </span>
+    </h1>
+
+    <p class="hero-description reveal">
+      <span class="reveal-inner">
+        I help businesses build, manage, and improve their digital presence through web development, data management, content support, and operational assistance.
+        With a combination of technical knowledge and practical experience.
+      </span>
+    </p>
+
+    <div class="separator"></div>
+
+    <p class="hero-description reveal">
+      <span class="reveal-inner">
+        From websites and business emails to spreadsheets,
+        reports, online forms, blogs, and digital assets,
+        I combine technical and practical skills to support
+        modern business operations.
+      </span>
+    </p>
+
+  </div>
+
+  <!-- RIGHT -->
+  <div class="right">
+
+    <div class="info-grid">
+      <div class="info-block reveal">
+        <div class="reveal-inner">
+          <div class="info-title">Development</div>
+          <div class="info-content">
+            Frontend Dev.<br>
+            Backend Fundamentals<br>
+            Website Management<br>
+            Responsive Interfaces
+          </div>
+        </div>
+      </div>
+
+      <div class="info-block reveal">
+        <div class="reveal-inner">
+          <div class="info-title">Digital Operations</div>
+          <div class="info-content">
+            Email Management<br>
+            Data Entry Operations<br>
+            Online Form Processing
+          </div>
+        </div>
+      </div>
+
+      <div class="info-block reveal">
+        <div class="reveal-inner">
+          <div class="info-title">Creative Media</div>
+          <div class="info-content">
+            Canva Design<br>
+            Posters & Thumbnails<br>
+            Social Media Management
+          </div>
+        </div>
+      </div>
+
+      <div class="info-block reveal">
+        <div class="reveal-inner">
+          <div class="info-title">Content Support</div>
+          <div class="info-content">
+            Content Writing<br>
+            Documentation Support<br>
+            Business Communication<br>
+            Advertisement Assistance
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="education-block reveal">
+      <div class="reveal-inner">
+        <div class="education-title">Education</div>
+        <div class="education-content">
+          <div class="education-line">Full Stack Development : HIIT Ambala · 2026</div>
+          <div class="education-line">Microsoft Office : HIIT Ambala · 2025</div>
+          <div class="education-line">Business Administration : KUK University · 1 Year Practical Learning</div>
+          <div class="education-line">Senior Secondary Education : HBSE Board · 83.6% · 2023</div>
+          <div class="education-line">Secondary Education : HBSE Board · 100% · 2021</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<script>
+const reveals = document.querySelectorAll('.reveal');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      reveals.forEach((element, index) => {
+        setTimeout(() => {
+          element.classList.add('active');
+        }, index * 650);
+      });
+    }
+  });
+}, {
+  threshold: 0.15,
+});
+
+reveals.forEach((item) => {
+  observer.observe(item);
+});
+
+const backBtn = document.querySelector('.back-btn');
+backBtn.addEventListener('click', () => {
+  window.location.href = '/';
+});
+
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.body.style.opacity = '1';
+  }, 100);
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    if (document.referrer) {
+      window.history.back();
+    }
+  }
+});
+
+const infoBlocks = document.querySelectorAll('.info-block');
+infoBlocks.forEach((block) => {
+  block.addEventListener('mouseenter', () => {
+    infoBlocks.forEach((item) => {
+      if (item !== block) {
+        item.style.opacity = '.45';
+      }
+    });
+  });
+
+  block.addEventListener('mouseleave', () => {
+    infoBlocks.forEach((item) => {
+      item.style.opacity = '1';
+    });
+  });
+});
+</script>
+
+</body>
+
+</html>

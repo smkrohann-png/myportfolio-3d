@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.08), transparent 22%),
+    #050505;
+  color: #efefef;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  padding: 32px 18px;
+}
+
+.page-shell {
+  width: min(760px, 100%);
+  padding: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+}
+
+.eyebrow,
+.link-row a {
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 18px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.46);
+}
+
+h1 {
+  margin: 0 0 14px;
+  font-size: clamp(34px, 8vw, 68px);
+  font-weight: 300;
+  line-height: 0.92;
+}
+
+p {
+  margin: 0;
+  max-width: 58ch;
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.link-row {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.link-row a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 11px;
+  padding: 10px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.link-row a:hover {
+  background: rgba(255, 255, 255, 0.08);
+}

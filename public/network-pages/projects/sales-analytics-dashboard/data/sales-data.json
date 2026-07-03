@@ -1,0 +1,252 @@
+[
+  {
+    "orderDate":"2024-01-03",
+    "region":"North",
+    "state":"Haryana",
+    "category":"Electronics",
+    "product":"LED TV",
+    "customer":"Amit Sharma",
+    "sales":85000,
+    "profit":12000
+  },
+  {
+    "orderDate":"2024-01-08",
+    "region":"North",
+    "state":"Punjab",
+    "category":"Home Appliances",
+    "product":"Refrigerator",
+    "customer":"Priya Verma",
+    "sales":42000,
+    "profit":6500
+  },
+  {
+    "orderDate":"2024-01-15",
+    "region":"West",
+    "state":"Gujarat",
+    "category":"Mobile Devices",
+    "product":"Smartphone",
+    "customer":"Rahul Singh",
+    "sales":68000,
+    "profit":11000
+  },
+  {
+    "orderDate":"2024-01-22",
+    "region":"West",
+    "state":"Maharashtra",
+    "category":"Electronics",
+    "product":"Laptop",
+    "customer":"Neha Gupta",
+    "sales":92000,
+    "profit":14500
+  },
+  {
+    "orderDate":"2024-02-02",
+    "region":"South",
+    "state":"Karnataka",
+    "category":"Mobile Devices",
+    "product":"Smartphone",
+    "customer":"Arjun Mehta",
+    "sales":55000,
+    "profit":8500
+  },
+  {
+    "orderDate":"2024-02-10",
+    "region":"South",
+    "state":"Tamil Nadu",
+    "category":"Kitchen Appliances",
+    "product":"Mixer Grinder",
+    "customer":"Sneha Kapoor",
+    "sales":18000,
+    "profit":3200
+  },
+  {
+    "orderDate":"2024-02-18",
+    "region":"East",
+    "state":"West Bengal",
+    "category":"Electronics",
+    "product":"LED TV",
+    "customer":"Rohit Yadav",
+    "sales":76000,
+    "profit":9800
+  },
+  {
+    "orderDate":"2024-02-26",
+    "region":"North",
+    "state":"Delhi",
+    "category":"Mobile Devices",
+    "product":"Smartphone",
+    "customer":"Ananya Jain",
+    "sales":48000,
+    "profit":7200
+  },
+  {
+    "orderDate":"2024-03-05",
+    "region":"Central",
+    "state":"Madhya Pradesh",
+    "category":"Home Appliances",
+    "product":"Washing Machine",
+    "customer":"Vikas Kumar",
+    "sales":36000,
+    "profit":5800
+  },
+  {
+    "orderDate":"2024-03-12",
+    "region":"North",
+    "state":"Uttar Pradesh",
+    "category":"Electronics",
+    "product":"Laptop",
+    "customer":"Pooja Sharma",
+    "sales":88000,
+    "profit":13200
+  },
+  {
+    "orderDate":"2024-03-20",
+    "region":"West",
+    "state":"Rajasthan",
+    "category":"Home Appliances",
+    "product":"Air Conditioner",
+    "customer":"Karan Arora",
+    "sales":52000,
+    "profit":7800
+  },
+  {
+    "orderDate":"2024-03-28",
+    "region":"South",
+    "state":"Karnataka",
+    "category":"Electronics",
+    "product":"Laptop",
+    "customer":"Nisha Reddy",
+    "sales":97000,
+    "profit":15800
+  },
+  {
+    "orderDate":"2024-04-04",
+    "region":"East",
+    "state":"West Bengal",
+    "category":"Kitchen Appliances",
+    "product":"Water Purifier",
+    "customer":"Sourav Das",
+    "sales":24000,
+    "profit":3600
+  },
+  {
+    "orderDate":"2024-04-13",
+    "region":"North",
+    "state":"Punjab",
+    "category":"Electronics",
+    "product":"LED TV",
+    "customer":"Manpreet Singh",
+    "sales":67000,
+    "profit":9300
+  },
+  {
+    "orderDate":"2024-04-22",
+    "region":"West",
+    "state":"Maharashtra",
+    "category":"Home Appliances",
+    "product":"Refrigerator",
+    "customer":"Riya Shah",
+    "sales":47000,
+    "profit":6900
+  },
+    {
+    "orderDate":"2024-05-03",
+    "region":"South",
+    "state":"Tamil Nadu",
+    "category":"Electronics",
+    "product":"Laptop",
+    "customer":"Vignesh Kumar",
+    "sales":102000,
+    "profit":16500
+  },
+  {
+    "orderDate":"2024-05-11",
+    "region":"Central",
+    "state":"Madhya Pradesh",
+    "category":"Home Appliances",
+    "product":"Air Conditioner",
+    "customer":"Akash Patel",
+    "sales":58000,
+    "profit":8600
+  },
+  {
+    "orderDate":"2024-05-19",
+    "region":"North",
+    "state":"Delhi",
+    "category":"Mobile Devices",
+    "product":"Smartphone",
+    "customer":"Simran Kaur",
+    "sales":61000,
+    "profit":8900
+  },
+  {
+    "orderDate":"2024-05-27",
+    "region":"West",
+    "state":"Gujarat",
+    "category":"Kitchen Appliances",
+    "product":"Mixer Grinder",
+    "customer":"Harsh Patel",
+    "sales":21000,
+    "profit":3300
+  },
+  {
+    "orderDate":"2024-06-04",
+    "region":"East",
+    "state":"West Bengal",
+    "category":"Electronics",
+    "product":"LED TV",
+    "customer":"Ankit Roy",
+    "sales":81000,
+    "profit":11800
+  },
+  {
+    "orderDate":"2024-06-10",
+    "region":"North",
+    "state":"Haryana",
+    "category":"Home Appliances",
+    "product":"Washing Machine",
+    "customer":"Deepak Malik",
+    "sales":39000,
+    "profit":5900
+  },
+  {
+    "orderDate":"2024-06-16",
+    "region":"South",
+    "state":"Karnataka",
+    "category":"Mobile Devices",
+    "product":"Smartphone",
+    "customer":"Shreya Nair",
+    "sales":73000,
+    "profit":10800
+  },
+  {
+    "orderDate":"2024-06-22",
+    "region":"West",
+    "state":"Rajasthan",
+    "category":"Home Appliances",
+    "product":"Ceiling Fan",
+    "customer":"Yash Gupta",
+    "sales":15000,
+    "profit":2400
+  },
+  {
+    "orderDate":"2024-06-29",
+    "region":"Central",
+    "state":"Madhya Pradesh",
+    "category":"Kitchen Appliances",
+    "product":"Water Purifier",
+    "customer":"Aditi Joshi",
+    "sales":26000,
+    "profit":3900
+  },
+  {
+    "orderDate":"2024-07-05",
+    "region":"North",
+    "state":"Uttar Pradesh",
+    "category":"Electronics",
+    "product":"Laptop",
+    "customer":"Rohan Verma",
+    "sales":95000,
+    "profit":15000
+  }
+]

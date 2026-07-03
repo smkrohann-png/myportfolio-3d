@@ -1,0 +1,3464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+/>
+
+<title>
+Website Hero Collection
+</title>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet"
+/>
+
+<style>
+
+:root{
+
+--bg:#ffffff;
+
+--text:#0f172a;
+
+--muted:#64748b;
+
+--border:#e2e8f0;
+
+--card:#ffffff;
+
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+font-family:
+'Inter',
+sans-serif;
+
+background:white;
+
+color:var(--text);
+
+overflow-x:hidden;
+}
+
+/* =========================
+BACKGROUND
+========================= */
+
+.background-grid{
+
+position:fixed;
+
+inset:0;
+
+z-index:-3;
+
+background-image:
+
+linear-gradient(
+rgba(0,0,0,.03)
+1px,
+transparent 1px
+),
+
+linear-gradient(
+90deg,
+rgba(0,0,0,.03)
+1px,
+transparent 1px
+);
+
+background-size:
+60px 60px;
+}
+
+.orb{
+
+position:fixed;
+
+border-radius:50%;
+
+filter:blur(120px);
+
+z-index:-2;
+
+pointer-events:none;
+}
+
+.orb-1{
+
+width:500px;
+height:500px;
+
+background:#dbeafe;
+
+top:-200px;
+left:-100px;
+}
+
+.orb-2{
+
+width:450px;
+height:450px;
+
+background:#ede9fe;
+
+right:-120px;
+top:20%;
+}
+
+.orb-3{
+
+width:400px;
+height:400px;
+
+background:#dcfce7;
+
+left:30%;
+bottom:-200px;
+}
+
+/* =========================
+NAV
+========================= */
+
+.nav{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+
+padding:
+24px 7vw;
+
+display:flex;
+
+justify-content:
+space-between;
+
+align-items:center;
+
+background:
+rgba(
+255,
+255,
+255,
+.75
+);
+
+backdrop-filter:
+blur(18px);
+
+border-bottom:
+1px solid
+rgba(
+0,
+0,
+0,
+.05
+);
+
+z-index:1000;
+}
+
+.logo{
+
+font-size:.8rem;
+
+font-weight:700;
+
+letter-spacing:5px;
+}
+
+.nav-links{
+
+display:flex;
+gap:30px;
+
+font-size:.85rem;
+
+color:#64748b;
+}
+
+.nav-links span{
+
+cursor:pointer;
+
+transition:.3s;
+}
+
+.nav-links span:hover{
+
+color:black;
+}
+
+/* =========================
+INTRO HERO
+========================= */
+
+.intro{
+
+min-height:100vh;
+
+display:flex;
+
+align-items:center;
+
+padding:
+120px 8vw;
+}
+
+.intro-inner{
+
+max-width:1100px;
+}
+
+.kicker{
+
+font-size:12px;
+
+letter-spacing:6px;
+
+text-transform:uppercase;
+
+color:#64748b;
+
+margin-bottom:30px;
+}
+
+.main-title{
+
+font-size:
+clamp(
+4rem,
+9vw,
+8rem
+);
+
+line-height:.88;
+
+letter-spacing:-6px;
+
+font-weight:300;
+
+margin-bottom:35px;
+
+max-width:1000px;
+}
+
+.gradient-word{
+
+background:
+linear-gradient(
+135deg,
+#2563eb,
+#8b5cf6
+);
+
+
+color:transparent;
+}
+
+.main-text{
+
+max-width:760px;
+
+font-size:1.05rem;
+
+line-height:2;
+
+color:#64748b;
+
+margin-bottom:50px;
+}
+
+.intro-actions{
+
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.primary-btn{
+
+padding:
+18px 32px;
+
+border-radius:14px;
+
+background:
+linear-gradient(
+135deg,
+#2563eb,
+#4f46e5
+);
+
+color:white;
+
+font-weight:600;
+
+cursor:pointer;
+
+box-shadow:
+0 20px 40px
+rgba(
+37,
+99,
+235,
+.18
+);
+}
+
+.secondary-btn{
+
+padding:
+18px 32px;
+
+border-radius:14px;
+
+border:
+1px solid
+#e2e8f0;
+
+background:white;
+
+cursor:pointer;
+}
+
+/* =========================
+SHOWCASE INFO
+========================= */
+
+.showcase-bar{
+
+margin-top:90px;
+
+display:grid;
+
+grid-template-columns:
+repeat(4,1fr);
+
+gap:40px;
+}
+
+.showcase-item{
+
+border-top:
+1px solid
+#e2e8f0;
+
+padding-top:18px;
+}
+
+.showcase-number{
+
+font-size:2rem;
+
+font-weight:300;
+
+margin-bottom:8px;
+}
+
+.showcase-label{
+
+font-size:.75rem;
+
+letter-spacing:2px;
+
+color:#64748b;
+}
+
+/* =========================
+SECTION
+========================= */
+
+.hero-section{
+
+min-height:100vh;
+
+padding:
+120px 8vw;
+
+display:flex;
+
+align-items:center;
+}
+
+.hero-grid{
+
+width:100%;
+
+display:grid;
+
+grid-template-columns:
+1fr 1fr;
+
+gap:90px;
+
+align-items:center;
+}
+
+/* =========================
+REVEAL
+========================= */
+
+.reveal{
+
+opacity:0;
+
+transform:
+translateY(60px);
+
+transition:
+1s
+cubic-bezier(
+.16,
+1,
+.3,
+1
+);
+}
+
+.reveal.active{
+
+opacity:1;
+
+transform:
+translateY(0);
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media(max-width:1000px){
+
+.hero-grid{
+grid-template-columns:1fr;
+}
+
+.showcase-bar{
+grid-template-columns:
+repeat(2,1fr);
+}
+
+.nav-links{
+display:none;
+}
+
+}
+
+@media(max-width:700px){
+
+.main-title{
+letter-spacing:-3px;
+}
+
+.showcase-bar{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="background-grid"></div>
+
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
+
+<nav class="nav">
+
+<div class="logo">
+SMK ROHAN
+</div>
+
+<div class="nav-links">
+
+<span>SaaS</span>
+<span>AI</span>
+<span>Medical</span>
+<span>Restaurant</span>
+<span>Agency</span>
+
+</div>
+
+</nav>
+
+<section class="intro">
+
+<div class="intro-inner">
+
+<div class="kicker reveal">
+PROJECT 01
+</div>
+
+<h1 class="main-title reveal">
+
+Premium
+<span class="gradient-word">
+Website Heroes
+</span>
+
+Collection
+
+</h1>
+
+<p class="main-text reveal">
+
+A curated collection of modern
+website hero sections designed
+for different industries.
+
+Each concept follows a unique
+visual system, typography,
+layout strategy and conversion
+approach inspired by real-world
+brands.
+
+</p>
+
+<div class="intro-actions reveal">
+
+<div class="primary-btn">
+Explore Collection
+</div>
+
+<div class="secondary-btn">
+View Portfolio
+</div>
+
+</div>
+
+<div class="showcase-bar reveal">
+
+<div class="showcase-item">
+
+<div class="showcase-number">
+05
+</div>
+
+<div class="showcase-label">
+INDUSTRIES
+</div>
+
+</div>
+
+<div class="showcase-item">
+
+<div class="showcase-number">
+100%
+</div>
+
+<div class="showcase-label">
+RESPONSIVE
+</div>
+
+</div>
+
+<div class="showcase-item">
+
+<div class="showcase-number">
+UI
+</div>
+
+<div class="showcase-label">
+PREMIUM DESIGN
+</div>
+
+</div>
+
+<div class="showcase-item">
+
+<div class="showcase-number">
+2026
+</div>
+
+<div class="showcase-label">
+LATEST STYLE
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ===================================== -->
+<!-- SAAS HERO -->
+<!-- ===================================== -->
+
+<section class="hero-section">
+
+<div class="hero-grid">
+
+<!-- LEFT -->
+
+<div>
+
+<div
+style="
+font-size:12px;
+letter-spacing:5px;
+color:#2563eb;
+margin-bottom:24px;
+"
+class="reveal"
+>
+SAAS PLATFORM
+</div>
+
+<h2
+style="
+font-size:clamp(3rem,6vw,6rem);
+font-weight:300;
+line-height:.9;
+letter-spacing:-4px;
+margin-bottom:24px;
+"
+class="reveal"
+>
+Grow Faster<br>
+With Better<br>
+Analytics
+</h2>
+
+<p
+style="
+max-width:560px;
+line-height:2;
+color:#64748b;
+margin-bottom:40px;
+"
+class="reveal"
+>
+
+Track revenue, customer behavior,
+team performance and growth
+metrics in one powerful dashboard.
+
+Built for startups, agencies and
+modern businesses.
+
+</p>
+
+<div
+style="
+display:flex;
+gap:18px;
+flex-wrap:wrap;
+"
+class="reveal"
+>
+
+<div class="primary-btn">
+Start Free Trial
+</div>
+
+<div class="secondary-btn">
+Book Demo
+</div>
+
+</div>
+
+<!-- TRUST -->
+
+<div
+style="
+display:flex;
+gap:40px;
+margin-top:70px;
+flex-wrap:wrap;
+"
+class="reveal"
+>
+
+<div>
+
+<div
+style="
+font-size:1.9rem;
+font-weight:300;
+"
+>
+120K+
+</div>
+
+<div
+style="
+font-size:.8rem;
+color:#64748b;
+"
+>
+ACTIVE USERS
+</div>
+
+</div>
+
+<div>
+
+<div
+style="
+font-size:1.9rem;
+font-weight:300;
+"
+>
+4.9★
+</div>
+
+<div
+style="
+font-size:.8rem;
+color:#64748b;
+"
+>
+RATING
+</div>
+
+</div>
+
+<div>
+
+<div
+style="
+font-size:1.9rem;
+font-weight:300;
+"
+>
+99.9%
+</div>
+
+<div
+style="
+font-size:.8rem;
+color:#64748b;
+"
+>
+UPTIME
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- RIGHT -->
+
+<div class="reveal">
+
+<div
+style="
+position:relative;
+height:650px;
+"
+>
+
+<!-- MAIN DASHBOARD -->
+
+<div
+style="
+position:absolute;
+right:0;
+top:40px;
+
+width:520px;
+height:360px;
+
+background:white;
+
+border-radius:28px;
+
+padding:28px;
+
+box-shadow:
+0 40px 80px
+rgba(0,0,0,.08);
+
+border:
+1px solid #eef2f7;
+"
+>
+
+<div
+style="
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:25px;
+"
+>
+
+<div
+style="
+font-weight:600;
+"
+>
+Analytics
+</div>
+
+<div
+style="
+font-size:.8rem;
+color:#64748b;
+"
+>
+LIVE
+</div>
+
+</div>
+
+<div
+style="
+display:grid;
+grid-template-columns:
+1fr 1fr;
+gap:18px;
+"
+>
+
+<div
+style="
+background:#f8fafc;
+padding:20px;
+border-radius:16px;
+"
+>
+
+<div
+style="
+font-size:.75rem;
+color:#64748b;
+margin-bottom:10px;
+"
+>
+Revenue
+</div>
+
+<div
+style="
+font-size:2rem;
+font-weight:300;
+"
+>
+$84K
+</div>
+
+</div>
+
+<div
+style="
+background:#eff6ff;
+padding:20px;
+border-radius:16px;
+"
+>
+
+<div
+style="
+font-size:.75rem;
+color:#64748b;
+margin-bottom:10px;
+"
+>
+Growth
+</div>
+
+<div
+style="
+font-size:2rem;
+font-weight:300;
+color:#2563eb;
+"
+>
++42%
+</div>
+
+</div>
+
+</div>
+
+<div
+style="
+margin-top:25px;
+height:160px;
+
+border-radius:18px;
+
+background:
+linear-gradient(
+180deg,
+#dbeafe,
+#eff6ff
+);
+"
+>
+
+</div>
+
+</div>
+
+<!-- FLOATING CARD 1 -->
+
+<div
+style="
+position:absolute;
+
+left:0;
+top:0;
+
+width:220px;
+
+background:white;
+
+padding:22px;
+
+border-radius:22px;
+
+box-shadow:
+0 30px 60px
+rgba(0,0,0,.08);
+
+border:
+1px solid #eef2f7;
+"
+>
+
+<div
+style="
+font-size:.8rem;
+color:#64748b;
+margin-bottom:10px;
+"
+>
+Monthly Visitors
+</div>
+
+<div
+style="
+font-size:2rem;
+font-weight:300;
+"
+>
+248K
+</div>
+
+</div>
+
+<!-- FLOATING CARD 2 -->
+
+<div
+style="
+position:absolute;
+
+left:50px;
+bottom:80px;
+
+width:260px;
+
+background:white;
+
+padding:24px;
+
+border-radius:22px;
+
+box-shadow:
+0 30px 60px
+rgba(0,0,0,.08);
+
+border:
+1px solid #eef2f7;
+"
+>
+
+<div
+style="
+font-size:.8rem;
+color:#64748b;
+margin-bottom:10px;
+"
+>
+Conversion Rate
+</div>
+
+<div
+style="
+font-size:2rem;
+font-weight:300;
+margin-bottom:10px;
+"
+>
+18.7%
+</div>
+
+<div
+style="
+height:8px;
+background:#e2e8f0;
+border-radius:20px;
+overflow:hidden;
+"
+>
+
+<div
+style="
+width:75%;
+height:100%;
+background:#2563eb;
+"
+></div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- MINI DIVIDER -->
+<!-- ===================================== -->
+
+<section
+style="
+padding:120px 8vw;
+text-align:center;
+"
+>
+
+<h2
+class="reveal"
+style="
+font-size:clamp(2rem,5vw,4rem);
+font-weight:300;
+margin-bottom:20px;
+"
+>
+Different Industries.<br>
+Different Design Systems.
+</h2>
+
+<p
+class="reveal"
+style="
+max-width:700px;
+margin:auto;
+line-height:2;
+color:#64748b;
+"
+>
+
+Every hero section below uses
+a completely different visual
+language inspired by real-world
+brands and products.
+
+</p>
+
+</section>
+<!-- ===================================== -->
+<!-- AI STARTUP HERO -->
+<!-- ===================================== -->
+
+<section
+class="hero-section"
+style="
+background:
+radial-gradient(
+circle at 70% 20%,
+rgba(99,102,241,.15),
+transparent 35%
+),
+linear-gradient(
+135deg,
+#070b14,
+#0f172a
+);
+
+color:white;
+overflow:hidden;
+position:relative;
+"
+>
+
+<!-- GLOW -->
+
+<div
+style="
+position:absolute;
+
+width:700px;
+height:700px;
+
+right:-250px;
+top:-150px;
+
+border-radius:50%;
+
+background:
+radial-gradient(
+circle,
+rgba(99,102,241,.25),
+transparent
+);
+
+filter:blur(60px);
+"
+></div>
+
+<div class="hero-grid">
+
+<!-- LEFT -->
+
+<div>
+
+<div
+class="reveal"
+style="
+font-size:12px;
+letter-spacing:5px;
+color:#a5b4fc;
+margin-bottom:24px;
+"
+>
+AI STARTUP
+</div>
+
+<h2
+class="reveal"
+style="
+font-size:clamp(3rem,6vw,6rem);
+font-weight:300;
+line-height:.9;
+letter-spacing:-4px;
+margin-bottom:24px;
+max-width:700px;
+"
+>
+The Future<br>
+Runs On AI
+</h2>
+
+<p
+class="reveal"
+style="
+max-width:560px;
+line-height:2;
+color:#cbd5e1;
+margin-bottom:40px;
+"
+>
+
+Build intelligent workflows,
+automate operations and create
+AI-powered products that scale.
+
+Designed for modern teams,
+founders and next-generation
+companies.
+
+</p>
+
+<div
+class="reveal"
+style="
+display:flex;
+gap:18px;
+flex-wrap:wrap;
+"
+>
+
+<div
+style="
+padding:18px 32px;
+
+border-radius:14px;
+
+background:
+linear-gradient(
+135deg,
+#6366f1,
+#8b5cf6
+);
+
+font-weight:600;
+
+cursor:pointer;
+"
+>
+Start Building
+</div>
+
+<div
+style="
+padding:18px 32px;
+
+border-radius:14px;
+
+border:1px solid rgba(255,255,255,.15);
+
+cursor:pointer;
+"
+>
+Research Paper
+</div>
+
+</div>
+
+<!-- STATS -->
+
+<div
+class="reveal"
+style="
+display:flex;
+gap:50px;
+margin-top:70px;
+flex-wrap:wrap;
+"
+>
+
+<div>
+
+<div
+style="
+font-size:2rem;
+font-weight:300;
+"
+>
+30M+
+</div>
+
+<div
+style="
+font-size:.8rem;
+color:#94a3b8;
+"
+>
+REQUESTS DAILY
+</div>
+
+</div>
+
+<div>
+
+<div
+style="
+font-size:2rem;
+font-weight:300;
+"
+>
+500+
+</div>
+
+<div
+style="
+font-size:.8rem;
+color:#94a3b8;
+"
+>
+COMPANIES
+</div>
+
+</div>
+
+<div>
+
+<div
+style="
+font-size:2rem;
+font-weight:300;
+"
+>
+99.99%
+</div>
+
+<div
+style="
+font-size:.8rem;
+color:#94a3b8;
+"
+>
+AVAILABILITY
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- RIGHT -->
+
+<div class="reveal">
+
+<div
+style="
+position:relative;
+height:650px;
+"
+>
+
+<!-- ORB -->
+
+<div
+style="
+position:absolute;
+
+left:50%;
+top:50%;
+
+transform:
+translate(-50%,-50%);
+
+width:360px;
+height:360px;
+
+border-radius:50%;
+
+background:
+radial-gradient(
+circle,
+#818cf8,
+#4f46e5
+);
+
+box-shadow:
+0 0 120px
+rgba(99,102,241,.6);
+"
+>
+
+</div>
+
+<!-- GLASS CARD -->
+
+<div
+style="
+position:absolute;
+
+top:50px;
+left:0;
+
+width:260px;
+
+padding:24px;
+
+border-radius:24px;
+
+background:
+rgba(
+255,
+255,
+255,
+.05
+);
+
+backdrop-filter:
+blur(20px);
+
+border:
+1px solid
+rgba(
+255,
+255,
+255,
+.08
+);
+"
+>
+
+<div
+style="
+font-size:.75rem;
+color:#cbd5e1;
+margin-bottom:12px;
+"
+>
+AI MODEL
+</div>
+
+<div
+style="
+font-size:1.8rem;
+font-weight:300;
+"
+>
+GPT-X
+</div>
+
+</div>
+
+<!-- CARD 2 -->
+
+<div
+style="
+position:absolute;
+
+right:0;
+top:140px;
+
+width:280px;
+
+padding:24px;
+
+border-radius:24px;
+
+background:
+rgba(
+255,
+255,
+255,
+.05
+);
+
+backdrop-filter:
+blur(20px);
+
+border:
+1px solid
+rgba(
+255,
+255,
+255,
+.08
+);
+"
+>
+
+<div
+style="
+font-size:.75rem;
+color:#cbd5e1;
+margin-bottom:12px;
+"
+>
+LATENCY
+</div>
+
+<div
+style="
+font-size:2rem;
+font-weight:300;
+"
+>
+0.3s
+</div>
+
+</div>
+
+<!-- CARD 3 -->
+
+<div
+style="
+position:absolute;
+
+left:40px;
+bottom:60px;
+
+width:320px;
+
+padding:24px;
+
+border-radius:24px;
+
+background:
+rgba(
+255,
+255,
+255,
+.05
+);
+
+backdrop-filter:
+blur(20px);
+
+border:
+1px solid
+rgba(
+255,
+255,
+255,
+.08
+);
+"
+>
+
+<div
+style="
+font-size:.75rem;
+color:#cbd5e1;
+margin-bottom:12px;
+"
+>
+TOKENS GENERATED
+</div>
+
+<div
+style="
+font-size:2rem;
+font-weight:300;
+margin-bottom:14px;
+"
+>
+14.2B
+</div>
+
+<div
+style="
+height:8px;
+background:
+rgba(
+255,
+255,
+255,
+.08
+);
+
+border-radius:20px;
+overflow:hidden;
+"
+>
+
+<div
+style="
+width:82%;
+height:100%;
+
+background:
+linear-gradient(
+90deg,
+#818cf8,
+#8b5cf6
+);
+"
+></div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- TRANSITION -->
+<!-- ===================================== -->
+
+<section
+style="
+padding:140px 8vw;
+text-align:center;
+background:white;
+"
+>
+
+<h2
+class="reveal"
+style="
+font-size:clamp(2rem,5vw,4rem);
+font-weight:300;
+margin-bottom:20px;
+"
+>
+Technology Meets
+Human Experience
+</h2>
+
+<p
+class="reveal"
+style="
+max-width:700px;
+margin:auto;
+line-height:2;
+color:#64748b;
+"
+>
+
+The next concepts move beyond
+technology and focus on trust,
+care and premium customer
+experiences.
+
+</p>
+
+</section>
+<!-- ===================================== -->
+<!-- MEDICAL HERO -->
+<!-- ===================================== -->
+
+<section
+class="hero-section"
+style="
+background:
+linear-gradient(
+180deg,
+#f8fbff,
+#ffffff
+);
+"
+>
+
+<div class="hero-grid">
+
+<!-- LEFT -->
+
+<div>
+
+<div
+class="reveal"
+style="
+font-size:12px;
+letter-spacing:5px;
+color:#0ea5e9;
+margin-bottom:24px;
+"
+>
+HEALTHCARE
+</div>
+
+<h2
+class="reveal"
+style="
+font-size:clamp(3rem,6vw,5.5rem);
+font-weight:300;
+line-height:.92;
+letter-spacing:-3px;
+margin-bottom:24px;
+max-width:700px;
+"
+>
+Advanced Care.<br>
+Trusted Doctors.<br>
+Better Outcomes.
+</h2>
+
+<p
+class="reveal"
+style="
+max-width:560px;
+line-height:2;
+color:#64748b;
+margin-bottom:40px;
+"
+>
+
+Providing world-class healthcare
+through experienced specialists,
+modern facilities and patient-first
+treatment plans.
+
+</p>
+
+<div
+class="reveal"
+style="
+display:flex;
+gap:18px;
+flex-wrap:wrap;
+"
+>
+
+<div
+style="
+padding:18px 32px;
+border-radius:14px;
+background:#0ea5e9;
+color:white;
+font-weight:600;
+cursor:pointer;
+"
+>
+Book Appointment
+</div>
+
+<div
+style="
+padding:18px 32px;
+border-radius:14px;
+border:1px solid #dbeafe;
+background:white;
+cursor:pointer;
+"
+>
+Find Doctor
+</div>
+
+</div>
+
+<!-- TRUST BADGES -->
+
+<div
+class="reveal"
+style="
+display:flex;
+gap:50px;
+margin-top:70px;
+flex-wrap:wrap;
+"
+>
+
+<div>
+
+<div
+style="
+font-size:2rem;
+font-weight:300;
+"
+>
+150+
+</div>
+
+<div
+style="
+font-size:.8rem;
+color:#64748b;
+"
+>
+SPECIALISTS
+</div>
+
+</div>
+
+<div>
+
+<div
+style="
+font-size:2rem;
+font-weight:300;
+"
+>
+50K+
+</div>
+
+<div
+style="
+font-size:.8rem;
+color:#64748b;
+"
+>
+PATIENTS
+</div>
+
+</div>
+
+<div>
+
+<div
+style="
+font-size:2rem;
+font-weight:300;
+"
+>
+24/7
+</div>
+
+<div
+style="
+font-size:.8rem;
+color:#64748b;
+"
+>
+EMERGENCY
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- RIGHT -->
+
+<div class="reveal">
+
+<div
+style="
+position:relative;
+height:650px;
+"
+>
+
+<!-- MAIN CARD -->
+
+<div
+style="
+position:absolute;
+right:0;
+top:20px;
+
+width:520px;
+height:580px;
+
+background:white;
+
+border-radius:32px;
+
+box-shadow:
+0 40px 80px
+rgba(0,0,0,.08);
+
+overflow:hidden;
+
+border:
+1px solid #eef2f7;
+"
+>
+
+<!-- IMAGE PLACEHOLDER -->
+
+<div
+style="
+height:320px;
+
+background:
+linear-gradient(
+135deg,
+#bae6fd,
+#e0f2fe
+);
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:14px;
+letter-spacing:4px;
+color:#0369a1;
+"
+>
+
+DOCTOR IMAGE
+
+</div>
+
+<!-- CONTENT -->
+
+<div
+style="
+padding:30px;
+"
+>
+
+<div
+style="
+font-size:1.5rem;
+font-weight:500;
+margin-bottom:10px;
+"
+>
+Dr. Sarah Williams
+</div>
+
+<div
+style="
+color:#0ea5e9;
+margin-bottom:20px;
+"
+>
+Cardiology Specialist
+</div>
+
+<p
+style="
+line-height:1.8;
+color:#64748b;
+margin-bottom:25px;
+"
+>
+
+20+ years of experience
+providing advanced cardiac care
+and personalized treatment.
+
+</p>
+
+<div
+style="
+display:flex;
+justify-content:space-between;
+"
+>
+
+<div>
+
+<div
+style="
+font-size:1.5rem;
+font-weight:300;
+"
+>
+4.9★
+</div>
+
+<div
+style="
+font-size:.8rem;
+color:#64748b;
+"
+>
+PATIENT RATING
+</div>
+
+</div>
+
+<div>
+
+<div
+style="
+font-size:1.5rem;
+font-weight:300;
+"
+>
+12K+
+</div>
+
+<div
+style="
+font-size:.8rem;
+color:#64748b;
+"
+>
+CONSULTATIONS
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- FLOATING APPOINTMENT -->
+
+<div
+style="
+position:absolute;
+left:0;
+bottom:40px;
+
+width:260px;
+
+padding:24px;
+
+background:white;
+
+border-radius:24px;
+
+box-shadow:
+0 30px 60px
+rgba(0,0,0,.08);
+
+border:
+1px solid #eef2f7;
+"
+>
+
+<div
+style="
+font-size:.8rem;
+color:#64748b;
+margin-bottom:12px;
+"
+>
+NEXT AVAILABLE
+</div>
+
+<div
+style="
+font-size:1.6rem;
+font-weight:300;
+margin-bottom:8px;
+"
+>
+Today
+</div>
+
+<div
+style="
+color:#0ea5e9;
+"
+>
+2:30 PM
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- HEALTHCARE DIVIDER -->
+<!-- ===================================== -->
+
+<section
+style="
+padding:140px 8vw;
+text-align:center;
+background:#ffffff;
+"
+>
+
+<h2
+class="reveal"
+style="
+font-size:clamp(2rem,5vw,4rem);
+font-weight:300;
+margin-bottom:20px;
+"
+>
+Premium Experiences
+Across Industries
+</h2>
+
+<p
+class="reveal"
+style="
+max-width:700px;
+margin:auto;
+line-height:2;
+color:#64748b;
+"
+>
+
+From healthcare to hospitality,
+every industry requires a unique
+visual language and customer journey.
+
+</p>
+
+</section>
+<!-- ===================================== -->
+<!-- RESTAURANT HERO -->
+<!-- ===================================== -->
+
+<section
+class="hero-section"
+style="
+background:
+linear-gradient(
+135deg,
+#0f0f0f,
+#1b140c
+);
+
+color:white;
+
+overflow:hidden;
+position:relative;
+"
+>
+
+<!-- GOLD GLOW -->
+
+<div
+style="
+position:absolute;
+
+width:700px;
+height:700px;
+
+right:-250px;
+top:-150px;
+
+border-radius:50%;
+
+background:
+radial-gradient(
+circle,
+rgba(212,175,55,.18),
+transparent
+);
+
+filter:blur(80px);
+"
+></div>
+
+<div class="hero-grid">
+
+<!-- LEFT -->
+
+<div>
+
+<div
+class="reveal"
+style="
+font-size:12px;
+letter-spacing:5px;
+color:#d4af37;
+margin-bottom:24px;
+"
+>
+LUXURY RESTAURANT
+</div>
+
+<h2
+class="reveal"
+style="
+font-size:clamp(3rem,6vw,6rem);
+font-weight:300;
+line-height:.9;
+letter-spacing:-4px;
+margin-bottom:24px;
+"
+>
+A Culinary<br>
+Experience Worth<br>
+Remembering
+</h2>
+
+<p
+class="reveal"
+style="
+max-width:560px;
+line-height:2;
+color:#d1d5db;
+margin-bottom:40px;
+"
+>
+
+Discover handcrafted cuisine,
+award-winning chefs and a dining
+experience designed for unforgettable
+moments.
+
+</p>
+
+<div
+class="reveal"
+style="
+display:flex;
+gap:18px;
+flex-wrap:wrap;
+"
+>
+
+<div
+style="
+padding:18px 32px;
+border-radius:14px;
+background:#d4af37;
+color:black;
+font-weight:600;
+cursor:pointer;
+"
+>
+Reserve Table
+</div>
+
+<div
+style="
+padding:18px 32px;
+border-radius:14px;
+border:1px solid rgba(212,175,55,.3);
+cursor:pointer;
+color:#d4af37;
+"
+>
+View Menu
+</div>
+
+</div>
+
+<!-- STATS -->
+
+<div
+class="reveal"
+style="
+display:flex;
+gap:50px;
+margin-top:70px;
+flex-wrap:wrap;
+"
+>
+
+<div>
+
+<div
+style="
+font-size:2rem;
+font-weight:300;
+"
+>
+4.9★
+</div>
+
+<div
+style="
+font-size:.8rem;
+color:#9ca3af;
+"
+>
+REVIEWS
+</div>
+
+</div>
+
+<div>
+
+<div
+style="
+font-size:2rem;
+font-weight:300;
+"
+>
+100+
+</div>
+
+<div
+style="
+font-size:.8rem;
+color:#9ca3af;
+"
+>
+SIGNATURE DISHES
+</div>
+
+</div>
+
+<div>
+
+<div
+style="
+font-size:2rem;
+font-weight:300;
+"
+>
+15
+</div>
+
+<div
+style="
+font-size:.8rem;
+color:#9ca3af;
+"
+>
+YEARS OF EXCELLENCE
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- RIGHT -->
+
+<div class="reveal">
+
+<div
+style="
+position:relative;
+height:700px;
+"
+>
+
+<!-- FOOD IMAGE AREA -->
+
+<div
+style="
+position:absolute;
+
+right:0;
+
+width:540px;
+height:620px;
+
+border-radius:36px;
+
+overflow:hidden;
+
+background:
+linear-gradient(
+135deg,
+#3f2a0f,
+#1b140c
+);
+
+box-shadow:
+0 50px 100px
+rgba(0,0,0,.35);
+"
+>
+
+<div
+style="
+height:100%;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:18px;
+letter-spacing:6px;
+
+color:#d4af37;
+"
+>
+
+FOOD PHOTOGRAPHY
+
+</div>
+
+</div>
+
+<!-- FLOATING CHEF CARD -->
+
+<div
+style="
+position:absolute;
+
+left:0;
+top:60px;
+
+width:260px;
+
+background:
+rgba(255,255,255,.05);
+
+backdrop-filter:
+blur(16px);
+
+border:
+1px solid
+rgba(255,255,255,.08);
+
+padding:24px;
+
+border-radius:24px;
+"
+>
+
+<div
+style="
+font-size:.8rem;
+color:#9ca3af;
+margin-bottom:10px;
+"
+>
+HEAD CHEF
+</div>
+
+<div
+style="
+font-size:1.5rem;
+font-weight:300;
+margin-bottom:8px;
+"
+>
+Marco Rossi
+</div>
+
+<div
+style="
+color:#d4af37;
+font-size:.9rem;
+"
+>
+Michelin Experience
+</div>
+
+</div>
+
+<!-- FLOATING RESERVATION -->
+
+<div
+style="
+position:absolute;
+
+left:30px;
+bottom:40px;
+
+width:280px;
+
+background:
+rgba(255,255,255,.05);
+
+backdrop-filter:
+blur(16px);
+
+border:
+1px solid
+rgba(255,255,255,.08);
+
+padding:26px;
+
+border-radius:24px;
+"
+>
+
+<div
+style="
+font-size:.8rem;
+color:#9ca3af;
+margin-bottom:10px;
+"
+>
+NEXT AVAILABLE
+</div>
+
+<div
+style="
+font-size:2rem;
+font-weight:300;
+margin-bottom:8px;
+"
+>
+7:30 PM
+</div>
+
+<div
+style="
+color:#d4af37;
+"
+>
+Reserve Instantly
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- TRANSITION -->
+<!-- ===================================== -->
+
+<section
+style="
+padding:140px 8vw;
+text-align:center;
+background:white;
+"
+>
+
+<h2
+class="reveal"
+style="
+font-size:clamp(2rem,5vw,4rem);
+font-weight:300;
+margin-bottom:20px;
+"
+>
+Design Is More Than
+Just Aesthetic
+</h2>
+
+<p
+class="reveal"
+style="
+max-width:720px;
+margin:auto;
+line-height:2;
+color:#64748b;
+"
+>
+
+Strong brands combine storytelling,
+visual hierarchy and user experience
+to create memorable digital products.
+
+</p>
+
+</section>
+<!-- ===================================== -->
+<!-- CREATIVE AGENCY HERO -->
+<!-- ===================================== -->
+
+<section
+class="hero-section"
+style="
+background:#fafafa;
+position:relative;
+overflow:hidden;
+"
+>
+
+<!-- BACKGROUND TEXT -->
+
+<div
+style="
+position:absolute;
+
+top:50%;
+left:50%;
+
+transform:
+translate(-50%,-50%);
+
+font-size:18vw;
+
+font-weight:700;
+
+color:
+rgba(
+0,
+0,
+0,
+.03
+);
+
+pointer-events:none;
+
+user-select:none;
+"
+>
+
+CREATE
+
+</div>
+
+<div class="hero-grid">
+
+<!-- LEFT -->
+
+<div>
+
+<div
+class="reveal"
+style="
+font-size:12px;
+letter-spacing:5px;
+color:#ef4444;
+margin-bottom:24px;
+"
+>
+CREATIVE AGENCY
+</div>
+
+<h2
+class="reveal"
+style="
+font-size:clamp(3rem,7vw,7rem);
+font-weight:300;
+line-height:.88;
+letter-spacing:-5px;
+margin-bottom:24px;
+"
+>
+Designing
+Brands That
+Move People.
+</h2>
+
+<p
+class="reveal"
+style="
+max-width:560px;
+line-height:2;
+color:#64748b;
+margin-bottom:40px;
+"
+>
+
+We create premium digital
+experiences through branding,
+web design, strategy and
+creative storytelling.
+
+</p>
+
+<div
+class="reveal"
+style="
+display:flex;
+gap:18px;
+flex-wrap:wrap;
+"
+>
+
+<div
+style="
+padding:18px 32px;
+
+background:#111827;
+
+color:white;
+
+border-radius:14px;
+
+font-weight:600;
+
+cursor:pointer;
+"
+>
+View Work
+</div>
+
+<div
+style="
+padding:18px 32px;
+
+border:1px solid #d1d5db;
+
+border-radius:14px;
+
+cursor:pointer;
+"
+>
+Start Project
+</div>
+
+</div>
+
+<!-- CLIENTS -->
+
+<div
+class="reveal"
+style="
+margin-top:80px;
+"
+>
+
+<div
+style="
+font-size:.8rem;
+letter-spacing:4px;
+color:#9ca3af;
+margin-bottom:18px;
+"
+>
+SELECTED CLIENTS
+</div>
+
+<div
+style="
+display:flex;
+gap:35px;
+flex-wrap:wrap;
+font-weight:600;
+"
+>
+
+<span>NIKE</span>
+<span>SPOTIFY</span>
+<span>NOTION</span>
+<span>ADOBE</span>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- RIGHT -->
+
+<div class="reveal">
+
+<div
+style="
+position:relative;
+height:720px;
+"
+>
+
+<!-- MAIN PROJECT -->
+
+<div
+style="
+position:absolute;
+
+right:0;
+
+width:520px;
+height:420px;
+
+background:white;
+
+border-radius:30px;
+
+overflow:hidden;
+
+box-shadow:
+0 40px 80px
+rgba(0,0,0,.08);
+"
+>
+
+<div
+style="
+height:260px;
+
+background:
+linear-gradient(
+135deg,
+#111827,
+#374151
+);
+"
+>
+
+</div>
+
+<div
+style="
+padding:26px;
+"
+>
+
+<div
+style="
+font-size:.8rem;
+letter-spacing:3px;
+color:#9ca3af;
+margin-bottom:10px;
+"
+>
+BRANDING
+</div>
+
+<div
+style="
+font-size:1.6rem;
+font-weight:500;
+"
+>
+Nova Studio Identity
+</div>
+
+</div>
+
+</div>
+
+<!-- PROJECT CARD -->
+
+<div
+style="
+position:absolute;
+
+left:0;
+top:50px;
+
+width:250px;
+
+background:white;
+
+padding:24px;
+
+border-radius:24px;
+
+box-shadow:
+0 30px 60px
+rgba(0,0,0,.08);
+"
+>
+
+<div
+style="
+font-size:.8rem;
+color:#9ca3af;
+margin-bottom:10px;
+"
+>
+AWARDS
+</div>
+
+<div
+style="
+font-size:2rem;
+font-weight:300;
+"
+>
+12
+</div>
+
+</div>
+
+<!-- PROJECT CARD -->
+
+<div
+style="
+position:absolute;
+
+left:40px;
+bottom:80px;
+
+width:280px;
+
+background:white;
+
+padding:26px;
+
+border-radius:24px;
+
+box-shadow:
+0 30px 60px
+rgba(0,0,0,.08);
+"
+>
+
+<div
+style="
+font-size:.8rem;
+color:#9ca3af;
+margin-bottom:10px;
+"
+>
+PROJECT SUCCESS
+</div>
+
+<div
+style="
+font-size:2rem;
+font-weight:300;
+margin-bottom:12px;
+"
+>
+98%
+</div>
+
+<div
+style="
+height:8px;
+background:#e5e7eb;
+border-radius:20px;
+overflow:hidden;
+"
+>
+
+<div
+style="
+width:98%;
+height:100%;
+background:#ef4444;
+"
+></div>
+
+</div>
+
+</div>
+
+<!-- FLOATING CARD -->
+
+<div
+style="
+position:absolute;
+
+right:20px;
+bottom:20px;
+
+width:220px;
+
+background:white;
+
+padding:24px;
+
+border-radius:24px;
+
+box-shadow:
+0 30px 60px
+rgba(0,0,0,.08);
+"
+>
+
+<div
+style="
+font-size:.8rem;
+color:#9ca3af;
+margin-bottom:10px;
+"
+>
+ACTIVE PROJECTS
+</div>
+
+<div
+style="
+font-size:2rem;
+font-weight:300;
+"
+>
+24
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- FINAL CTA -->
+<!-- ===================================== -->
+
+<section
+style="
+padding:180px 8vw;
+text-align:center;
+background:
+linear-gradient(
+135deg,
+#111827,
+#1f2937
+);
+
+color:white;
+"
+>
+
+<div
+class="reveal"
+style="
+font-size:12px;
+letter-spacing:6px;
+color:#9ca3af;
+margin-bottom:25px;
+"
+>
+END OF COLLECTION
+</div>
+
+<h2
+class="reveal"
+style="
+font-size:clamp(3rem,7vw,7rem);
+font-weight:300;
+line-height:.9;
+letter-spacing:-4px;
+margin-bottom:30px;
+"
+>
+
+Five Industries.
+Five Different
+Experiences.
+
+</h2>
+
+<p
+class="reveal"
+style="
+max-width:760px;
+margin:auto;
+line-height:2;
+color:#d1d5db;
+margin-bottom:50px;
+"
+>
+
+Every hero section was crafted
+with a different audience,
+industry and conversion strategy
+in mind.
+
+From SaaS to Healthcare,
+Restaurants and Agencies.
+
+</p>
+
+<div
+class="reveal"
+style="
+display:inline-flex;
+gap:20px;
+flex-wrap:wrap;
+justify-content:center;
+"
+>
+
+<div
+style="
+padding:18px 34px;
+background:white;
+color:black;
+border-radius:14px;
+font-weight:600;
+cursor:pointer;
+"
+>
+View Portfolio
+</div>
+
+<div
+style="
+padding:18px 34px;
+border:1px solid rgba(255,255,255,.15);
+border-radius:14px;
+cursor:pointer;
+"
+>
+Contact Me
+</div>
+
+</div>
+
+</section>
+<!-- ===================================== -->
+<!-- SCROLL PROGRESS -->
+<!-- ===================================== -->
+
+<div id="progressBar"></div>
+
+<style>
+
+/* =====================================
+SCROLL PROGRESS
+===================================== */
+
+#progressBar{
+
+position:fixed;
+
+top:0;
+left:0;
+
+height:3px;
+
+width:0%;
+
+background:
+linear-gradient(
+90deg,
+#2563eb,
+#8b5cf6,
+#ef4444,
+#f59e0b
+);
+
+z-index:99999;
+}
+
+/* =====================================
+CUSTOM CURSOR
+===================================== */
+
+.cursor{
+
+position:fixed;
+
+width:18px;
+height:18px;
+
+border-radius:50%;
+
+border:1px solid #111;
+
+pointer-events:none;
+
+z-index:99999;
+
+transform:
+translate(-50%,-50%);
+
+transition:
+width .2s,
+height .2s,
+background .2s;
+}
+
+.cursor-grow{
+
+width:50px;
+height:50px;
+
+background:
+rgba(0,0,0,.05);
+}
+
+/* =====================================
+FLOATING ANIMATION
+===================================== */
+
+.floating{
+
+animation:
+floating 7s ease-in-out infinite;
+}
+
+@keyframes floating{
+
+0%{
+transform:
+translateY(0px);
+}
+
+50%{
+transform:
+translateY(-15px);
+}
+
+100%{
+transform:
+translateY(0px);
+}
+
+}
+
+/* =====================================
+SECTION ENTRANCE
+===================================== */
+
+.fade-up{
+
+opacity:0;
+
+transform:
+translateY(60px);
+}
+
+.fade-up.show{
+
+opacity:1;
+
+transform:
+translateY(0);
+
+transition:
+1.1s
+cubic-bezier(
+.16,
+1,
+.3,
+1
+);
+}
+
+/* =====================================
+BETTER MOBILE
+===================================== */
+
+@media(max-width:1200px){
+
+.hero-grid{
+
+grid-template-columns:
+1fr;
+
+gap:60px;
+}
+
+}
+
+@media(max-width:768px){
+
+.hero-section{
+
+padding:
+100px 7vw;
+}
+
+.main-title{
+
+font-size:
+clamp(
+3rem,
+12vw,
+5rem
+);
+
+letter-spacing:-2px;
+}
+
+.hero-title{
+
+letter-spacing:-2px !important;
+}
+
+.primary-btn,
+.secondary-btn{
+
+width:100%;
+
+text-align:center;
+}
+
+.showcase-bar{
+
+grid-template-columns:
+1fr;
+}
+
+}
+
+@media(max-width:500px){
+
+.hero-section{
+
+padding:
+80px 6vw;
+}
+
+}
+
+</style>
+
+<div class="cursor"></div>
+
+<script>
+
+/* =====================================
+REVEAL ANIMATION
+===================================== */
+
+const reveals =
+document.querySelectorAll(
+'.reveal'
+);
+
+const observer =
+new IntersectionObserver(
+(entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add(
+'active'
+);
+
+}
+
+});
+
+},
+{
+threshold:0.15
+}
+);
+
+reveals.forEach(el=>{
+
+observer.observe(el);
+
+});
+
+/* =====================================
+SCROLL PROGRESS
+===================================== */
+
+const progressBar =
+document.getElementById(
+'progressBar'
+);
+
+window.addEventListener(
+'scroll',
+()=>{
+
+const scrollTop =
+window.scrollY;
+
+const height =
+document.documentElement
+.scrollHeight -
+window.innerHeight;
+
+const progress =
+(scrollTop / height) * 100;
+
+progressBar.style.width =
+progress + '%';
+
+}
+);
+
+/* =====================================
+CUSTOM CURSOR
+===================================== */
+
+const cursor =
+document.querySelector(
+'.cursor'
+);
+
+window.addEventListener(
+'mousemove',
+(e)=>{
+
+cursor.style.left =
+e.clientX + 'px';
+
+cursor.style.top =
+e.clientY + 'px';
+
+}
+);
+
+document
+.querySelectorAll(
+'button,.primary-btn,.secondary-btn,a'
+)
+.forEach(item=>{
+
+item.addEventListener(
+'mouseenter',
+()=>{
+
+cursor.classList.add(
+'cursor-grow'
+);
+
+}
+);
+
+item.addEventListener(
+'mouseleave',
+()=>{
+
+cursor.classList.remove(
+'cursor-grow'
+);
+
+}
+);
+
+});
+
+/* =====================================
+SMOOTH FLOATING CARDS
+===================================== */
+
+document
+.querySelectorAll(
+'.floating'
+)
+.forEach((item,index)=>{
+
+item.style.animationDelay =
+(index * 0.6) + 's';
+
+});
+
+/* =====================================
+PARALLAX ORBS
+===================================== */
+
+const orb1 =
+document.querySelector(
+'.orb-1'
+);
+
+const orb2 =
+document.querySelector(
+'.orb-2'
+);
+
+const orb3 =
+document.querySelector(
+'.orb-3'
+);
+
+window.addEventListener(
+'mousemove',
+(e)=>{
+
+const x =
+e.clientX /
+window.innerWidth;
+
+const y =
+e.clientY /
+window.innerHeight;
+
+if(orb1){
+
+orb1.style.transform =
+`translate(
+${x * -30}px,
+${y * -30}px
+)`;
+
+}
+
+if(orb2){
+
+orb2.style.transform =
+`translate(
+${x * 40}px,
+${y * 40}px
+)`;
+
+}
+
+if(orb3){
+
+orb3.style.transform =
+`translate(
+${x * -20}px,
+${y * 20}px
+)`;
+
+}
+
+}
+);
+
+/* =====================================
+PAGE LOAD ANIMATION
+===================================== */
+
+window.addEventListener(
+'load',
+()=>{
+
+document.body.animate(
+[
+{
+opacity:0
+},
+{
+opacity:1
+}
+],
+{
+duration:1200,
+fill:'forwards'
+}
+);
+
+}
+);
+
+</script>
+
+</body>
+</html>

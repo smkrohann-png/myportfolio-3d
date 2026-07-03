@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+:root {
+  --background: #020202;
+  --foreground: #d4d4d4;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  touch-action: none;
+}
+
+body {
+  font-family: var(--font-geist-sans), sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  cursor: none !important;
+}
+
+.network-page {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 55% 42%, rgba(255, 255, 255, 0.03), transparent 30%),
+    #020202;
+}
+
+.network-page canvas {
+  width: 100% !important;
+  height: 100% !important;
+  touch-action: none;
+}
+
+.network-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.network-mark,
+.network-link {
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.network-mark {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.02);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 22px;
+  line-height: 1;
+}
+
+.network-link {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.32);
+  text-decoration: none;
+  white-space: nowrap;
+  pointer-events: auto;
+  user-select: none;
+  transition:
+    color 180ms ease,
+    opacity 180ms ease,
+    text-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.network-link.hero {
+  font-size: clamp(10px, 0.86vw, 15px);
+  font-weight: 400;
+}
+
+.network-link.body {
+  font-size: clamp(8px, 0.68vw, 14px);
+  font-weight: 400;
+}
+
+.network-link.micro {
+  font-size: clamp(6px, 0.56vw, 12px);
+  font-weight: 400;
+}
+
+.network-link.outer {
+  opacity: 0.82;
+}
+
+.network-link.inner {
+  opacity: 0.58;
+}
+
+.network-link.is-active,
+.network-link:hover {
+  color: #fff;
+  opacity: 1;
+  text-shadow: 0 0 18px rgba(255, 255, 255, 0.36);
+  transform: scale(1.02);
+}
+
+@media (max-width: 900px) {
+  .network-mark {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .network-link.hero {
+    font-size: clamp(9px, 2.2vw, 13px);
+  }
+
+  .network-link.body {
+    font-size: clamp(7px, 1.8vw, 10px);
+  }
+
+  .network-link.micro {
+    font-size: clamp(6px, 1.45vw, 8px);
+  }
+}
